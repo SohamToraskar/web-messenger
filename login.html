@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>St. Xaviers College Chat room</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>St. Xaviers College Chat room</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field"/>
+
+    <button onclick="login()">Login to Account</button>
+    <button onclick="create_account()">Create new Account</button>
+    <button onclick="anonymous()">Anonymous View</button>
+    <h2>Note:</h2>
+    <h3>-Fill Email, Password and click "Create new account"</h3>
+    <h3>-We dont have access to user passwords"</h3>
+  </div>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+
+      // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBEOTiwTus2khBSGxx0pmUzVjW7XUyMDSI",
+      authDomain: "sxcchat.firebaseapp.com",
+      databaseURL: "https://sxcchat.firebaseio.com",
+      projectId: "sxcchat",
+      storageBucket: "sxcchat.appspot.com",
+      messagingSenderId: "343713281180"
+    };
+    firebase.initializeApp(config);
+
+  </script>
+
+  <script src="login.js"></script>
+
+</body>
+</html>

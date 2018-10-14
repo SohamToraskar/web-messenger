@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>St. Xaviers College Chat Room - Soham</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="update()">
+
+	<div class="modal">
+
+	  <div class="content">
+	    <iframe src="https://anonfile.com/" height="800" width="311"></iframe>
+	  </div>
+	  <div onclick="hidemodal()" class="hide_btn">X</div>
+	</div>
+
+	<!-- <div id="overlay">
+<div class="spinner"></div>
+</div> -->
+
+<div class="msg-container">
+  <button class="btn" onclick="logout()">Login / Logout</button>
+	<div class="header">St. Xaviers College Chat Room (<span id="show_name">Stranger - Login to message</span>)</div>
+	<div class="msg-area" id="msg-area">
+		<h2 align="center" >The End..last 200 msgs</h2>
+	</div>
+	<div class="bottom"><input type="text" name="msginput" maxlength="200" class="msginput" id="msginput" onkeydown="if (event.keyCode == 13) sendmsg()" value="" placeholder="Enter your message here ... (Press enter to send message)"></div>
+<div id="upload"><a onclick="showmodal()" class="bttn" href="#">Upload file</a></div>
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBEOTiwTus2khBSGxx0pmUzVjW7XUyMDSI",
+    authDomain: "sxcchat.firebaseapp.com",
+    databaseURL: "https://sxcchat.firebaseio.com",
+    projectId: "sxcchat",
+    storageBucket: "sxcchat.appspot.com",
+    messagingSenderId: "343713281180"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
